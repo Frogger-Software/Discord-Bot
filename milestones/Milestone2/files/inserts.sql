@@ -1,6 +1,6 @@
-   -- Script name: inserts.sql
-   -- Author:      Ze Lei
-   -- Purpose:     insert sample data to test the integrity of this database system
+-- Script name: inserts.sql
+-- Author:      Ze Lei
+-- Purpose:     insert sample data to test the integrity of this database system
 USE `FrogXDB`;
 
 INSERT INTO `Department` (`department_id`) VALUES (1), (2), (3);
@@ -75,7 +75,7 @@ INSERT INTO `Campus_Assign` ( `employee`, `campus`) VALUES
  (2, 2),
  (3, 3);
  
- INSERT INTO `Parking Lot` (`name`, `capacity`) VALUES
+ INSERT INTO `Parking_Lot` (`name`, `capacity`) VALUES
  ('San', 40),
  ('Luis', 40),
  ('Obispo', 40);
@@ -119,8 +119,8 @@ INSERT INTO `Sale` (`product`, `profit`) VALUES
  INSERT INTO `CEO` (`name`) VALUES
  ('Cook'),('Jobs'),('Wozniak');
  
- INSERT INTO `Department_Head` (`department`, `ceo`) VALUES
- (1, 1), (2, 1),(3, 1);
+ INSERT INTO `Department_Head` (`department`, `ceo`, `name`) VALUES
+ (1, 1, 'Ryan'), (2, 1, 'Joe'),(3, 1, 'Josh');
  
  INSERT INTO `Shares` (`ceo`) VALUES
  (1),(2),(3);
@@ -129,9 +129,9 @@ INSERT INTO `Sale` (`product`, `profit`) VALUES
  
  INSERT INTO `Retail_Shares` (`shares`, `shareholder`) VALUES (1, 1),(3, 2),(2, 3);
  
- INSERT INTO `Board Member` (`name`) VALUES ('Yves'),('Saint'),('Laurent');
+ INSERT INTO `Board_Member` (`name`) VALUES ('Yves'),('Saint'),('Laurent');
  
- INSERT INTO `Board Shares` (`shares`, `board`) VALUES (1, 2),(1, 2), (2, 1);
+ INSERT INTO `Board_Shares` (`shares`, `board`) VALUES (1, 2),(1, 2), (2, 1);
  
  
  
