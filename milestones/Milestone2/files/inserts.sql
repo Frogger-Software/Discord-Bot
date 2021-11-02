@@ -114,7 +114,7 @@ INSERT INTO `Sale` (`product`, `profit`) VALUES
  
  INSERT INTO `Platform` (`name`) VALUES ('Firefox'),('Chrome'),('Brave');
  
- INSERT INTO `On` (`product`, `platform`) VALUES (1, 2),(2, 2),(3, 2);
+ INSERT INTO `On` (`product`, `platform`) VALUES (1, 1),(2, 2),(3, 3);
  
  INSERT INTO `CEO` (`name`) VALUES
  ('Cook'),('Jobs'),('Wozniak');

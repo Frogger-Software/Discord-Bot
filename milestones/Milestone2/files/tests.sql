@@ -13,7 +13,7 @@ DELETE FROM Teams WHERE team_id = 3;
 UPDATE Teams SET team_id = 5 WHERE team_id = 2;
 
 DELETE FROM Team_Assign WHERE employee = 3;
-UPDATE Team_Assign SET employee = 5 WHERE employee = 2;
+UPDATE Team_Assign SET employee = 3 WHERE employee = 2;
 
 DELETE FROM Campus WHERE campus_id = 3;
 UPDATE Campus SET campus_id = 5 WHERE campus_id = 2;
@@ -43,22 +43,23 @@ DELETE FROM Janitor WHERE janitor_id = 3;
 UPDATE Janitor SET janitor_id = 5 WHERE janitor_id = 2;
  
 DELETE FROM Cleaning_Assign WHERE campus = 3;
+-- 1. UPDATE Cleaning_Assign SET campus = 5 WHERE campus = 2; 23:41:17	UPDATE Cleaning_Assign SET campus = 5 WHERE campus = 2	Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`frogxdb`.`cleaning_assign`, CONSTRAINT `CLEANINGASSIGN_CAMPUS_FK` FOREIGN KEY (`campus`) REFERENCES `campus` (`campus_id`) ON DELETE CASCADE ON UPDATE CASCADE)	0.016 sec
 UPDATE Cleaning_Assign SET campus = 5 WHERE campus = 2;
  
 DELETE FROM Parking_Lot WHERE parking_lot_id = 3;
 UPDATE Parking_Lot SET parking_lot_id = 5 WHERE parking_lot_id = 2;
  
-DELETE FROM Parking WHERE parking_id = 3;
+DELETE FROM Parking WHERE parking_id = 1;
 UPDATE Parking SET parking_id = 5 WHERE parking_id = 2;
  
 DELETE FROM Marketing WHERE department = 3;
--- UPDATE Marketing SET department = 5 WHERE department = 2; 22:44:30	UPDATE Marketing SET department = 5 WHERE department = 2	Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`frogxdb`.`marketing`, CONSTRAINT `MARKETING_DEPARTMENT_FK` FOREIGN KEY (`department`) REFERENCES `department` (`department_id`) ON DELETE CASCADE ON UPDATE CASCADE)	0.000 sec
- UPDATE Marketing SET department = 2 WHERE department = 1;
+-- 2. UPDATE Marketing SET department = 5 WHERE department = 2; 22:44:30	UPDATE Marketing SET department = 5 WHERE department = 2	Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`frogxdb`.`marketing`, CONSTRAINT `MARKETING_DEPARTMENT_FK` FOREIGN KEY (`department`) REFERENCES `department` (`department_id`) ON DELETE CASCADE ON UPDATE CASCADE)	0.000 sec
+ UPDATE Marketing SET department = 3 WHERE department = 1;
  
 DELETE FROM Software WHERE department = 3;
-UPDATE Software SET department = 2 WHERE department = 1;
+UPDATE Software SET department = 3 WHERE department = 1;
 
-DELETE FROM Sales WHERE department = 2;
+DELETE FROM Sales WHERE department = 3;
 UPDATE Sales SET department = 3 WHERE department = 1;
 
 DELETE FROM Product WHERE product_id = 3;
@@ -70,11 +71,8 @@ UPDATE Advertisement SET advertisement_id = 5 WHERE advertisement_id = 2;
 DELETE FROM Location WHERE location_id = 3;
 UPDATE Location SET location_id = 5 WHERE location_id = 2;
 
-DELETE FROM Billboard WHERE billboard_id = 3;
+DELETE FROM Billboard WHERE billboard_id = 1;
 UPDATE Billboard SET billboard_id = 5 WHERE billboard_id = 2;
-
-DELETE FROM Sale WHERE sale_id = 3;
-UPDATE Sale SET sale_id = 5 WHERE sale_id = 2;
 
 DELETE FROM Sale WHERE sale_id = 3;
 UPDATE Sale SET sale_id = 5 WHERE sale_id = 2;
@@ -88,8 +86,9 @@ UPDATE `Uses` SET `user` = 5 WHERE `user` = 2;
 DELETE FROM `Platform` WHERE `platform_id` = 3;
 UPDATE `Platform` SET `platform_id` = 5 WHERE `platform_id` = 2;
 
-DELETE FROM `On` WHERE `product` = 3;
-UPDATE `On` SET `product` = 5 WHERE `product` = 2; 
+DELETE FROM `On` WHERE `product` = 2;
+-- 3. UPDATE `On` SET `product` = 3 WHERE `product` = 1; 23:48:47	UPDATE `On` SET `product` = 3 WHERE `product` = 1	Error Code: 1062. Duplicate entry '3-2' for key 'on.PRIMARY'	0.000 sec
+UPDATE `On` SET `product` = 3 WHERE `product` = 1;
 
 DELETE FROM `CEO` WHERE `ceo_id` = 3;
 UPDATE `CEO` SET `ceo_id` = 5 WHERE `ceo_id` = 2;
@@ -105,9 +104,6 @@ UPDATE `Shareholders` SET `shareholders_id` = 5 WHERE `shareholders_id` = 2;
  
 DELETE FROM `Retail_Shares` WHERE `retail_shares_id` = 3;
 UPDATE `Retail_Shares` SET `retail_shares_id` = 5 WHERE `retail_shares_id` = 2;  
-
-DELETE FROM `Retail_Shares` WHERE `retail_shares_id` = 3;
-UPDATE `Retail_Shares` SET `retail_shares_id` = 5 WHERE `retail_shares_id` = 2; 
 
 DELETE FROM `Board_Member` WHERE `board_member_id` = 3;
 UPDATE `Board_Member` SET `board_member_id` = 5 WHERE `board_member_id` = 2;
