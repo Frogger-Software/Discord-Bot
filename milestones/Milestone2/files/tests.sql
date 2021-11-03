@@ -88,7 +88,7 @@ UPDATE `Platform` SET `platform_id` = 5 WHERE `platform_id` = 2;
 
 DELETE FROM `On` WHERE `product` = 2;
 -- 3. UPDATE `On` SET `product` = 3 WHERE `product` = 1; 23:48:47	UPDATE `On` SET `product` = 3 WHERE `product` = 1	Error Code: 1062. Duplicate entry '3-2' for key 'on.PRIMARY'	0.000 sec
-UPDATE `On` SET `product` = 3 WHERE `product` = 1;
+UPDATE `On` SET `product` = 1 WHERE `product` = 3;
 
 DELETE FROM `CEO` WHERE `ceo_id` = 3;
 UPDATE `CEO` SET `ceo_id` = 5 WHERE `ceo_id` = 2;
