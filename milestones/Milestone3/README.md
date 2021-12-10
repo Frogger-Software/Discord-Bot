@@ -1,5 +1,7 @@
 # Replit
 https://replit.com/join/idqtbtgwrz-froggerius
+# Discord Server
+https://discord.gg/jASpKPNufb
 # Creating a Discord Bot That Interacts With Your Database Model
 
 In this milestone, students will create a Discord bot to test their database models. 
