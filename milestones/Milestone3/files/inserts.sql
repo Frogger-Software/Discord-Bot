@@ -6,10 +6,12 @@ USE `FrogXDB`;
 INSERT INTO `Department` (`department_id`) VALUES (1), (2), (3);
 -- SELECT * FROM Department;
 
-INSERT INTO `Employees` (`employee_id`, `name`, `manager`, `department`) VALUES
- (1, 'Bob', NULL, 1),
- (2, 'Rob', 1, 2),
- (3, 'Job', 1, 3);
+INSERT INTO `Employees` (`name`, `manager`, `department`) VALUES
+ ('Gob', NULL, 1),
+ ('Rob', 1, 2),
+ ('Job', 1, 3),
+ ('Cob', 3, 2),
+ ('Qob', 3, 3);
 -- SELECT * FROM Employees;
 
 INSERT INTO `Teams` (`team_id`, `team_lead`, `team_name`) VALUES 
@@ -64,7 +66,11 @@ INSERT INTO `Campus_Assign` ( `employee`, `campus`) VALUES
  ( 1, 1, '2021-12-01 00:00:00'),
  ( 2, 2, '2019-12-01 00:00:00'),
  ( 3, 3, '2021-12-01 00:00:00'),
- ( 3, 1, '2019-12-01 00:00:00');
+ ( 3, 1, '2019-12-01 00:00:00'),
+ ( 1, 1, '2021-12-01 00:00:00'),
+ ( 2, 2, '2019-12-01 00:00:00'),
+ ( 3, 3, '2021-12-01 00:00:00'),
+ ( 3, 1, '2021-10-01 00:00:00');
  
  INSERT INTO `Dining_Hall` (`name`) VALUES
  ('City'),

@@ -19,8 +19,15 @@ left join Sale s ON s.product = p.product_id
 GROUP BY p.`name`;
 
 select
-c.`name` AS "Campus Name", vl.`date` AS "Visit Date"
+c.`name` AS "Campus Name", COUNT(vl.`date`) AS "Visits"
 from Campus c
 left join Visitor_List vl ON vl.campus = c.campus_id
+where vl.`date` >= DATE_ADD(NOW(), INTERVAL -2 MONTH)
 group by c.`name`;
 
+select
+e.`name` AS "Manager Name", e.manager AS "Manager ID", count(e.manager) AS "Employees Managed"
+from Employees e
+group by e.manager;
+
+select * from Employees;
