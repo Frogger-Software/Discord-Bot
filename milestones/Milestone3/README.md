@@ -1,13 +1,13 @@
-### SW COMPANY DATABASE SYSTEM
-# Student Info
+# SW COMPANY DATABASE SYSTEM
+### Student Info
 Name: Ze Lei
 
 Student ID: 918312764
-# Discord Server
+### Discord Server
 https://discord.gg/jASpKPNufb
-# Replit
+### Replit
 https://replit.com/join/idqtbtgwrz-froggerius
-# Commands
+### Commands
 1. /big-janitors <x janitors>
 2. /ad-costs
 3. /revenue
@@ -15,7 +15,7 @@ https://replit.com/join/idqtbtgwrz-froggerius
 6. /managers
 7. /best-products <x products>
 8. /best-activities 
-# Business Rules
+### Business Rules
 1. For each janitor, find the x that have cleaned the most in square footage
 2. For each product, calculate the total cost of advertisements
 3. For each product, find the total gross revenue
