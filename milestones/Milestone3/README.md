@@ -8,12 +8,12 @@ https://discord.gg/jASpKPNufb
 ### Replit
 https://replit.com/join/idqtbtgwrz-froggerius
 ### Commands
-1. /big-janitors <x janitors>
+1. /big-janitors \<x janitors\>
 2. /ad-costs
 3. /revenue
-4. /campus-visits <x month>
+4. /campus-visits \<x month\>
 6. /managers
-7. /best-products <x products>
+7. /best-products \<x products\>
 8. /best-activities 
 ### Business Rules
 1. For each janitor, find the x that have cleaned the most in square footage
