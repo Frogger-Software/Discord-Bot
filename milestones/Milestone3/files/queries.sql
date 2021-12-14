@@ -25,9 +25,34 @@ left join Visitor_List vl ON vl.campus = c.campus_id
 where vl.`date` >= DATE_ADD(NOW(), INTERVAL -2 MONTH)
 group by c.`name`;
 
-select
-e.`name` AS "Manager Name", e.manager AS "Manager ID", count(e.manager) AS "Employees Managed"
-from Employees e
-group by e.manager;
+SELECT 
+m.name AS "Manager Name" 
+,COUNT(e.employee_id) AS "Employees Managed"
+FROM Employees e
+JOIN Employees m ON m.employee_id = e.manager
+GROUP BY m.name;
 
-select * from Employees;
+select
+p.name AS "Product Name", SUM(s.profit) 
+-- * 100 / t.s 
+AS "Profit"
+from 
+Sale s
+left join Product p ON p.product_id = s.product
+cross join (select
+SUM(s.profit) AS s
+from Sale s) t
+group by p.name
+order by "Profit"
+limit 3;
+
+Select
+w.name AS "Wellness Center Name", a.daily_activity AS "Most Popular Acitivity"
+From Wellness_Center w
+left join Activities a ON a.wellness = w.wellness_center_id
+group by a.daily_activity, w.name 
+order by count(a.daily_activity);
+
+
+
+

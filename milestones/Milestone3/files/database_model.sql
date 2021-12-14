@@ -39,14 +39,15 @@ CREATE TABLE IF NOT EXISTS `FrogXDB`.`Employees` (
   `department` INT UNSIGNED NULL,
   PRIMARY KEY (`employee_id`),
   UNIQUE INDEX `EmployeeID_UNIQUE` (`employee_id` ASC),
-  CONSTRAINT `EMPLOYEE_MANAGER_FK`
-    FOREIGN KEY (`manager`)
-    REFERENCES `FrogXDB`.`Employees` (`employee_id`)
-    ON DELETE SET NULL
-    ON UPDATE CASCADE,
+  INDEX `EMPLOYEE_MANAGER_FK_idx` (`manager` ASC),
   CONSTRAINT `EMPLOYEE_DEPARTMENT_FK`
     FOREIGN KEY (`department`)
     REFERENCES `FrogXDB`.`Department` (`department_id`)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE,
+  CONSTRAINT `EMPLOYEE_MANAGER_FK`
+    FOREIGN KEY (`manager`)
+    REFERENCES `FrogXDB`.`Employees` (`employee_id`)
     ON DELETE SET NULL
     ON UPDATE CASCADE)
 ENGINE = InnoDB;

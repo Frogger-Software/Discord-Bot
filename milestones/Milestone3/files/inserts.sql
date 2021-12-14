@@ -10,9 +10,8 @@ INSERT INTO `Employees` (`name`, `manager`, `department`) VALUES
  ('Gob', NULL, 1),
  ('Rob', 1, 2),
  ('Job', 1, 3),
- ('Cob', 3, 2),
- ('Qob', 3, 3);
--- SELECT * FROM Employees;
+ ('Cob', 2, 2),
+ ('Qob', 2, 3);
 
 INSERT INTO `Teams` (`team_id`, `team_lead`, `team_name`) VALUES 
 (1, NULL, 'robots'),
@@ -55,7 +54,12 @@ INSERT INTO `Campus_Assign` ( `employee`, `campus`) VALUES
  INSERT INTO `Activities` (`campus`, `wellness`, `daily_activity`) VALUES
  (1, 2, 'run'),
  (2, 2, 'walk'),
- (1, 3, 'jump');
+ (1, 3, 'jump'),
+ (1, 2, 'run'),
+ (1, 2, 'run'),
+ (1, 2, 'run'),
+ (1, 3, 'jump'),
+ (1, 1, 'jump');
  
  INSERT INTO `Visitor` (`name`) VALUES
  ( 'John'),
@@ -147,3 +151,6 @@ INSERT INTO `Sale` (`product`, `profit`) VALUES
  INSERT INTO `Board_Member` (`name`) VALUES ('Yves'),('Saint'),('Laurent');
  
  INSERT INTO `Board_Shares` (`shares`, `board`) VALUES (1, 2),(1, 2), (2, 1);
+ 
+
+ 
