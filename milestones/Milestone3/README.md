@@ -15,6 +15,8 @@ https://replit.com/join/idqtbtgwrz-froggerius
 6. /managers
 7. /best-products \<x products\>
 8. /best-activities 
+where x is any non-negative integer
+e.g. /big-janitors 2
 ### Business Rules
 1. For each janitor, find the x that have cleaned the most in square footage
 2. For each product, calculate the total cost of advertisements
