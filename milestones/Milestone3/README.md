@@ -1,7 +1,28 @@
-# Replit
-https://replit.com/join/idqtbtgwrz-froggerius
+# name and student id
+Name: Ze Lei
+Student ID: 918312764
 # Discord Server
 https://discord.gg/jASpKPNufb
+# Replit
+https://replit.com/join/idqtbtgwrz-froggerius
+# Commands
+1. /big-janitors <x janitors>
+2. /ad-costs
+3. /revenue
+4. /campus-visits <x month>
+6. /managers
+7. /best-products <x products>
+8. /best-activities 
+# Business Rules
+1. For each janitor, find the x that have cleaned the most in square footage
+2. For each product, calculate the total cost of advertisements
+3. For each product, find the total gross revenue
+4. For each campus, find all visitors that visited within the past x months
+6. For each manager, find the number of employees they manage
+7. Find the x highest grossing products
+8. For each wellness center, find the most popular activity on average 
+
+
 # Creating a Discord Bot That Interacts With Your Database Model
 
 In this milestone, students will create a Discord bot to test their database models. 
