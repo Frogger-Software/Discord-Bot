@@ -1,5 +1,7 @@
-# name and student id
+### SW COMPANY DATABASE SYSTEM
+# Student Info
 Name: Ze Lei
+
 Student ID: 918312764
 # Discord Server
 https://discord.gg/jASpKPNufb
